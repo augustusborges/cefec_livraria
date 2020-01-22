@@ -27,8 +27,9 @@
         
             $this->url();
         }
-
+        
         public function run(){
+            echo("TESTE");
             if ($this->controller) {
                 $this->controllerName = ucwords($this->controller) . 'Controller';
                 $this->controllerName = preg_replace('/[^a-zA-Z]/i', '', $this->controllerName);
