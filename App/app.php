@@ -13,7 +13,6 @@
         public  $controllerName;
 
         public function __construct(){
-            
             //Constantes do sistema
             define('APP_HOST'       , $_SERVER['HTTP_HOST'] . "/cefec_livraria");
             define('PATH'           , realpath('./'));
@@ -24,7 +23,10 @@
             define('DB_PASSWORD'    , "");
             define('DB_NAME'        , "devmedia");
             define('DB_DRIVER'      , "mysql");
-        
+
+            echo(APP_HOST);
+
+            
             $this->url();
         }
         
@@ -87,23 +89,19 @@
             }
         }
     
-        public function getController()
-        {
+        public function getController(){
             return $this->controller;
         }
  
-        public function getAction()
-        {
+        public function getAction(){
             return $this->action;
         }
  
-        public function getControllerName()
-        {
+        public function getControllerName(){
             return $this->controllerName;
         }
  
-        public function getParams()
-        {
+        public function getParams(){
             return $this->params;
         }
  
