@@ -6,8 +6,7 @@ use App\Models\Entidades\Usuario;
 
 class UsuarioDAO extends BaseDAO
 {
-    public function verificaEmail($email)
-    {
+    public function verificaEmail($email){
         try {
 
             $query = $this->select(
