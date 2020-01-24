@@ -2,34 +2,37 @@
     namespace App\Controllers;
  
     use App\Lib\Sessao;
-    use App\Models\DAO\UsuarioDAO;
-    use App\Models\Entidades\Usuario;
+    use App\Models\DAO\PessoaDAO;
+    use App\Models\Entidades\Pessoa;
  
     class UsuarioController extends Controller{
         
         public function cadastro(){
-            $this->render('/usuario/cadastro');
+            $this->render('/pessoa/cadastro');
  
             Sessao::limpaFormulario();
             Sessao::limpaMensagem();
         }
  
         public function salvar(){
-            $Usuario = new Usuario();
-            $Usuario->setNome($_POST['nome']);
-            $Usuario->setEmail($_POST['email']);
+            $Pessoa = new Pessoa();
+            $Pessoa->setNome($_POST['nome']);
+            $Pessoa->setEmail($_POST['email']);
+            $Pessoa->setSenha($_POST['senha']);
+            $Pessoa->setTelefone($_POST['telefone']);
+            $Pessoa->setDataNascimento($_POST['dataNascimento']);
  
             Sessao::gravaFormulario($_POST);
  
-            $usuarioDAO = new UsuarioDAO();
+            $pessoaDAO = new PessoaDAO();
  
-            if($usuarioDAO->verificaEmail($_POST['email'])){
+            if($pessoaDAO->verificaEmail($_POST['email'])){
                 Sessao::gravaMensagem("Email existente");
-                $this->redirect('/usuario/cadastro');
+                $this->redirect('/pessoa/cadastro');
             }
  
-            if($usuarioDAO->salvar($Usuario)){
-                $this->redirect('/usuario/sucesso');
+            if($pessoaDAO->salvar($Pessoa)){
+                $this->redirect('/pessoa/sucesso');
             }else{
                 Sessao::gravaMensagem("Erro ao gravar");
             }
@@ -37,7 +40,7 @@
      
         public function sucesso(){
             if(Sessao::retornaValorFormulario('nome')) {
-                $this->render('/usuario/sucesso');
+                $this->render('/pessoa/sucesso');
  
                 Sessao::limpaFormulario();
                 Sessao::limpaMensagem();
@@ -47,7 +50,7 @@
         }
  
         public function index(){
-            $this->redirect('/usuario/cadastro');
+            $this->redirect('/pessoa/cadastro');
         }
     }
 ?>    

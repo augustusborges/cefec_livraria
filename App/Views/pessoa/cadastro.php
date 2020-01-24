@@ -18,6 +18,24 @@
                     <input type="email" class="form-control" name="email" placeholder="" value="<?php echo $Sessao::retornaValorFormulario('email'); ?>" required>
                 </div>
 
+
+
+                <div class="form-group">
+                    <label for="senha">Senha</label>
+                    <input type="senha" class="form-control" name="senha" placeholder="" value="<?php echo $Sessao::retornaValorFormulario('senha'); ?>" required>
+                </div>
+                <div class="form-group">
+                    <label for="telefone">Telefone</label>
+                    <input type="telefone" class="form-control" name="telefone" placeholder="" value="<?php echo $Sessao::retornaValorFormulario('telefone'); ?>" required>
+                </div>
+                <div class="form-group">
+                    <label for="dataNascimento">Data Nascimento</label>
+                    <input type="dataNascimento" class="form-control" name="dataNascimento" placeholder="" value="<?php echo $Sessao::retornaValorFormulario('dataNascimento'); ?>" required>
+                </div>
+
+
+
+
                 <button type="submit" class="btn btn-success btn-sm">Salvar</button>
             </form>
         </div>
