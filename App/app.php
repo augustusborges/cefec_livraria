@@ -18,10 +18,10 @@
             define('PATH'           , realpath('./'));
             define('TITLE'          , "Gestão de Livraria");
             
-            define('DB_HOST'        , "localhost");
-            define('DB_USER'        , "root");
-            define('DB_PASSWORD'    , "");
-            define('DB_NAME'        , "devmedia");
+            define('DB_HOST'        , "213.190.6.1");
+            define('DB_USER'        , "u455891771_cefec");
+            define('DB_PASSWORD'    , "Cfec1806");
+            define('DB_NAME'        , "u455891771_cefec");
             define('DB_DRIVER'      , "mysql");
 
             echo(APP_HOST);
