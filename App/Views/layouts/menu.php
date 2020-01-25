@@ -7,15 +7,15 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="http://<?php echo APP_HOST; ?>">Devmedia</a>
+            <a class="navbar-brand" href="http://<?php echo APP_HOST; ?>">CEFEC</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
                 <li <?php if($viewVar['nameController'] == "HomeController") { ?> class="active" <?php } ?>>
                     <a href="http://<?php echo APP_HOST; ?>" >Home</a>
                 </li>
-                <li <?php if($viewVar['nameController'] == "UsuarioController") { ?> class="active" <?php } ?>>
-                    <a href="http://<?php echo APP_HOST; ?>/usuario/cadastro" >Cadastro de Usuário</a>
+                <li <?php if($viewVar['nameController'] == "PessoaController") { ?> class="active" <?php } ?>>
+                    <a href="http://<?php echo APP_HOST; ?>/pessoa/cadastro" >Cadastro de Usuário</a>
                 </li>
             </ul>
         </div>

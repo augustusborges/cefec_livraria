@@ -2,9 +2,9 @@
 
 namespace App\Models\DAO;
 
-use App\Models\Entidades\Usuario;
+use App\Models\Entidades\Pessoa;
 
-class UsuarioDAO extends BaseDAO
+class PessoaDAO extends BaseDAO
 {
     public function verificaEmail($email){
         try {
@@ -29,7 +29,7 @@ class UsuarioDAO extends BaseDAO
             $dataNascimento     = $pessoa->getDataNascimento();
             return $this->insert(
                 'pessoa',
-                ":nomePessoa,:emailPessoa, :senhaPessoa, :telefonEPessoa, :dataNascimentoPessoa",
+                ":nomePessoa,:emailPessoa, :senhaPessoa, :telefonePessoa, :dataNascimentoPessoa",
                 [
                     ':nomePessoa'=>$nome,
                     ':emailPessoa'=>$email,

@@ -5,7 +5,7 @@
     use App\Models\DAO\PessoaDAO;
     use App\Models\Entidades\Pessoa;
  
-    class UsuarioController extends Controller{
+    class PessoaController extends Controller{
         
         public function cadastro(){
             $this->render('/pessoa/cadastro');
