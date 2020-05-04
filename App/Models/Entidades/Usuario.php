@@ -2,8 +2,8 @@
 
 namespace App\Models\Entidades;
 
-class Pessoa
-{
+class Usuario{
+    
     private $id;
     private $nome;
     private $email;

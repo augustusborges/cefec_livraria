@@ -8,7 +8,7 @@
                 <div class="alert alert-warning" role="alert"><?php echo $Sessao::retornaMensagem(); ?></div>
             <?php } ?>
 
-            <form action="http://<?php echo APP_HOST; ?>/pessoa/salvar" method="post" id="form_cadastro">
+            <form action="http://<?php echo APP_HOST; ?>/usuario/salvar" method="post" id="form_cadastro">
                 <div class="form-group">
                     <label for="nome">Nome</label>
                     <input type="text" class="form-control"  name="nome" placeholder="Seu nome" value="<?php echo $Sessao::retornaValorFormulario('nome'); ?>" required>

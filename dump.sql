@@ -1,37 +1,36 @@
 --Tabela de livros
-CREATE TABLE `u455891771_cefec`.`livros` (
-  `idLivro` INT NOT NULL AUTO_INCREMENT,
-  `tituloLivro` VARCHAR(45) NOT NULL,
-  `subtituloLivro` VARCHAR(45) NOT NULL,
-  `isbnLivro` VARCHAR(45) NOT NULL,
-  `edicaoLivro` INT NULL,
-  `numeroPaginasLivro` INT NULL,
-  `precoCompraLivro` DOUBLE NULL,
-  `precoVendaLivro` DOUBLE NULL,
-  `quantidadeLivro` INT NULL,
-  `anoLivro` INT NULL,
-  PRIMARY KEY (`idLivro`));
-
+CREATE TABLE `livros` (
+  `livroId` INT NOT NULL AUTO_INCREMENT,
+  `livroTitulo` VARCHAR(45) NOT NULL,
+  `livroSubtitulo` VARCHAR(45) NOT NULL,
+  `livroISBN` VARCHAR(45) NOT NULL,
+  `livroEdicao` INT NULL,
+  `livroNumeroPaginas` INT NULL,
+  `livroPrecoCompra` DOUBLE NULL,
+  `livroPrecoVenda` DOUBLE NULL,
+  `livroQuantidade` INT NULL,
+  `livroAno` INT NULL,
+  PRIMARY KEY (`livroId`));
 
 --Tabela pessoas
-  CREATE TABLE `u455891771_cefec`.`pessoa` (
-  `idPessoa` INT NOT NULL AUTO_INCREMENT,
-  `nomePessoa` VARCHAR(100) NULL,
-  `emailPessoa` VARCHAR(100) NULL,
-  `senhaPessoa` VARCHAR(255) NULL,
-  `dataNascimentoPessoa` DATE NULL,
-  PRIMARY KEY (`idPessoa`));
+  CREATE TABLE `usuario` (
+  `usuarioId` INT NOT NULL AUTO_INCREMENT,
+  `usuarioNome` VARCHAR(100) NULL,
+  `usuarioEmail` VARCHAR(100) NOT NULL,
+  `usuarioSenha` VARCHAR(255) NULL,
+  `usuarioDataNascimento` DATE NULL,
+  PRIMARY KEY (`usuarioId`));
 
 --Tabela autores
-  CREATE TABLE `u455891771_cefec`.`autor` (
-  `idAutor` INT NOT NULL AUTO_INCREMENT,
-  `nomeAutor` VARCHAR(255) NOT NULL,
-  `nacionalidadeAutor` VARCHAR(100) NULL,
-  `descricaoAutor` VARCHAR(255) NULL,
-  PRIMARY KEY (`idAutor`));
+  CREATE TABLE `autor` (
+  `autorId` INT NOT NULL AUTO_INCREMENT,
+  `autorNome` VARCHAR(255) NOT NULL,
+  `autorNacionalidade` VARCHAR(100) NULL,
+  `autorDescricao` VARCHAR(255) NULL,
+  PRIMARY KEY (`autorId`));
 
 --Tabela Tipo Pessoa (diretor, associado, efetivo, colaborador)
-  CREATE TABLE `u455891771_cefec`.`pessoaTipo` (
-  `idPessoaTipo` INT NOT NULL AUTO_INCREMENT,
-  `tipoPessoaTipo` VARCHAR(255) NOT NULL,
-  PRIMARY KEY (`idPessoaTipo`));
+  CREATE TABLE `usuarioTipo` (
+  `usuarioTipoId` INT NOT NULL AUTO_INCREMENT,
+  `usuarioTipoTipo` VARCHAR(255) NOT NULL,
+  PRIMARY KEY (`usuarioTipoId`));

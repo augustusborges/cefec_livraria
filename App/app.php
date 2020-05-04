@@ -18,13 +18,11 @@
             define('PATH'           , realpath('./'));
             define('TITLE'          , "Gestão de Livraria");
             
-            define('DB_HOST'        , "213.190.6.1");
-            define('DB_USER'        , "u455891771_cefec");
-            define('DB_PASSWORD'    , "Cfec1806");
-            define('DB_NAME'        , "u455891771_cefec");
-            define('DB_DRIVER'      , "mysql");
-
-            echo(APP_HOST);
+            define('DB_HOST'        , "127.0.0.1:3306"); // 213.190.6.1
+            define('DB_USER'        , "Padrao"); // u455891771_cefec
+            define('DB_PASSWORD'    , "Carol0608"); // Cfec1806
+            define('DB_NAME'        , "cefec_livraria"); // u455891771_cefec
+            define('DB_DRIVER'      , "mysql"); // mysql
             
             $this->url();
         }

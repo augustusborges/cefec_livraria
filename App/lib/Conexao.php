@@ -24,7 +24,8 @@ class Conexao
             }
             return $connection;
         } catch (PDOException $e) {
-            throw new Exception("Erro de conexão com o banco de dados",500);
+            throw new Exception($e,500);
+            //throw new Exception("Erro de conexão com o banco de dados",500);
         }
     }
 }

@@ -14,9 +14,13 @@
                 <li <?php if($viewVar['nameController'] == "HomeController") { ?> class="active" <?php } ?>>
                     <a href="http://<?php echo APP_HOST; ?>" >Home</a>
                 </li>
-                <li <?php if($viewVar['nameController'] == "PessoaController") { ?> class="active" <?php } ?>>
-                    <a href="http://<?php echo APP_HOST; ?>/pessoa/cadastro" >Cadastro de Usuário</a>
+                <li <?php if($viewVar['nameController'] == "UsuarioController") { ?> class="active" <?php } ?>>
+                    <a href="http://<?php echo APP_HOST; ?>/usuario/cadastro" >Cadastro de Usuário</a>
                 </li>
+                <li <?php if($viewVar['nameController'] == "LivroController") { ?> class="active" <?php } ?>>
+                    <a href="http://<?php echo APP_HOST; ?>/livro/cadastro" >Cadastro de Livros</a>
+                </li>
+
             </ul>
         </div>
     </div>
